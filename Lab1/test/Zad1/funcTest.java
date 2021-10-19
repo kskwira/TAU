@@ -54,6 +54,22 @@ public class funcTest {
     }
 
     @Test
+    public void testMultipleFunctions() {
+        System.out.println("ADD + DIVIDE TEST");
+        int addResult = func.add(5, 3);
+        int divideResult = func.divide(40, addResult);
+        assertEquals(5, divideResult);
+    }
+
+    @Test
+    public void testMultipleFunctions2() {
+        System.out.println("SUBTRACT + MULTIPLY TEST");
+        int subtractResult = func.subtract(5, 3);
+        int multiplyResult = func.multiply(40, subtractResult);
+        assertEquals(80, multiplyResult);
+    }
+
+    @Test
     public void testSortAsc() {
         System.out.println("SORT ASC TEST");
         int [] unsortedArr = new int [] {8, 3, 2, 6};
@@ -62,5 +78,18 @@ public class funcTest {
         assertArrayEquals(sortedArr, result);
     }
 
+    @Test
+    public void testCheckPalindrome() {
+        System.out.println("PALINDROME TEST");
+        boolean result = func.checkPalindrome("kayak");
+        assertTrue(result);
+    }
+
+    @Test
+    public void testCheckPalindrome2() {
+        System.out.println("PALINDROME TEST");
+        boolean result = func.checkPalindrome("boat");
+        assertFalse(result);
+    }
 
 }

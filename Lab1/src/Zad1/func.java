@@ -60,4 +60,21 @@ public class func {
         return arr;
     }
 
+    public boolean checkPalindrome(String word) {
+        //Assuming result to be true
+        boolean result = true;
+        int length = word.length();
+
+        //dividing the length of the string by 2 and comparing it.
+        for(int i=0; i<= length/2; i++) {
+            if(word.charAt(i) != word.charAt(length-i-1)) {
+                result = false;
+                break;
+            }
+        }
+
+        System.out.println(word + " is palindrome = " + result);
+        return result;
+    }
+
 }
