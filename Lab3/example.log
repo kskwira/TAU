@@ -1,0 +1,25 @@
+2021-12-05 18:22:51,622 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cat-fact.herokuapp.com:443
+2021-12-05 18:22:52,241 - urllib3.connectionpool - DEBUG - https://cat-fact.herokuapp.com:443 "GET /factsss/random HTTP/1.1" 404 153
+2021-12-05 18:22:52,241 - REST API test - INFO - Test 1 - correct
+2021-12-05 18:22:52,241 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cat-fact.herokuapp.com:443
+2021-12-05 18:22:52,797 - urllib3.connectionpool - DEBUG - https://cat-fact.herokuapp.com:443 "GET /facts/random HTTP/1.1" 200 373
+2021-12-05 18:22:52,797 - REST API test - INFO - Test 2 - correct
+2021-12-05 18:22:52,797 - REST API test - INFO - Test 3 - correct
+2021-12-05 18:22:52,797 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cat-fact.herokuapp.com:443
+2021-12-05 18:22:53,379 - urllib3.connectionpool - DEBUG - https://cat-fact.herokuapp.com:443 "GET /facts/random?animal_type=dog HTTP/1.1" 200 463
+2021-12-05 18:22:53,379 - REST API test - INFO - Test 4 - correct
+2021-12-05 18:22:53,379 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cat-fact.herokuapp.com:443
+2021-12-05 18:22:54,639 - urllib3.connectionpool - DEBUG - https://cat-fact.herokuapp.com:443 "GET /facts/random?amount=15 HTTP/1.1" 200 5695
+2021-12-05 18:22:54,639 - REST API test - INFO - Test 5 - correct
+2021-12-05 18:22:54,655 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cat-fact.herokuapp.com:443
+2021-12-05 18:22:55,257 - urllib3.connectionpool - DEBUG - https://cat-fact.herokuapp.com:443 "GET /facts/591f98803b90f7150a19c229 HTTP/1.1" 200 498
+2021-12-05 18:22:55,257 - REST API test - INFO - Test 6 - correct
+2021-12-05 18:22:55,257 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cat-fact.herokuapp.com:443
+2021-12-05 18:22:55,860 - urllib3.connectionpool - DEBUG - https://cat-fact.herokuapp.com:443 "GET /users/me HTTP/1.1" 401 27
+2021-12-05 18:22:55,860 - REST API test - INFO - Test 7 - correct
+2021-12-05 18:22:55,860 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cat-fact.herokuapp.com:443
+2021-12-05 18:22:56,432 - urllib3.connectionpool - DEBUG - https://cat-fact.herokuapp.com:443 "POST /facts HTTP/1.1" 401 27
+2021-12-05 18:22:56,432 - REST API test - ERROR - Test 8 - post unsuccessful, response message: Sign in first
+2021-12-05 18:22:56,432 - REST API test - INFO - Tests completed
+Number PASSED: 7
+Number FAILED: 1
