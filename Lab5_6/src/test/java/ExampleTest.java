@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
 import org.junit.*;
 
 import org.joda.time.LocalDate;
@@ -79,25 +80,85 @@ public class ExampleTest {
     }
 
     @Test
-    public void testCheckPalindrome() {
-        System.out.println("PALINDROME TEST");
+    public void testCheckPalindromeTrue() {
+        System.out.println("PALINDROME TRUE TEST");
         boolean result = Example.checkPalindrome("kayak");
         assertTrue(result);
     }
 
     @Test
-    public void testCheckPalindrome2() {
-        System.out.println("PALINDROME TEST");
+    public void testCheckPalindromeFalse() {
+        System.out.println("PALINDROME FALSE TEST");
         boolean result = Example.checkPalindrome("boat");
         assertFalse(result);
     }
 
     @Test
-    public void testGetMonthNameInJapanese() {
-        System.out.println("GET MONTH NAME IN JAPANESE TEST");
-        String result = Example.getMonthNameInJapanese(LocalDate.parse("2021-12-19"));
-        System.out.println("Month name in Japanese: " + result);
-        assertEquals("12月", result);
+    public void testLogarithm() {
+        System.out.println("LOGARITHM TEST");
+        double result = Example.logarithm(10);
+        assertEquals(2.302585092994046, result, 1e-15);
+    }
+
+    @Test
+    public void testSquareRoot() {
+        System.out.println("SQUARE ROOT TEST");
+        double result = Example.squareRoot(25);
+        assertEquals(5, result, 1e-15);
+    }
+
+    @Test
+    public void testPowerOfTwoNumbers() {
+        System.out.println("POWER OF 2 NUMBERS TEST");
+        double result = Example.powerOfTwoNumbers(4, 3);
+        assertEquals(64, result, 1e-15);
+    }
+
+    @Test
+    public void testFibonacci() {
+        System.out.println("FIBONACCI 1 TEST");
+        int eight_element = 13;
+        ArrayList<Integer> result = Example.fibonacci(8);
+        assertEquals(eight_element, result.get(7).intValue());
+    }
+
+    @Test
+    public void testFibonacci2() {
+        System.out.println("FIBONACCI 2 TEST");
+        int tenth_element = 34;
+        ArrayList<Integer> result = Example.fibonacci(10);
+        assertEquals(tenth_element, result.get(9).intValue());
+    }
+
+    @Test
+    public void testSortDesc() {
+        System.out.println("SORT DESC TEST");
+        int [] unsortedArr = new int [] {8, 3, 2, 6};
+        int [] result = Example.sortDesc(unsortedArr);
+        int [] sortedArr = new int [] {8, 6, 3, 2};
+        assertArrayEquals(sortedArr, result);
+    }
+
+    @Test
+    public void testCheckPrimeNumberTrue() {
+        System.out.println("PRIME NUMBER TRUE TEST");
+        boolean result = Example.checkPrimeNumber(47);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testCheckPrimeNumberFalse() {
+        System.out.println("PRIME NUMBER FALSE TEST");
+        boolean result = Example.checkPrimeNumber(84);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testGetMonthNameInGerman() {
+        System.out.println("GET MONTH NAME IN GERMAN TEST");
+        String result = Example.getMonthNameInGerman(LocalDate.parse("2021-12-19"));
+        System.out.println("Month name in German: " + result);
+        assertEquals("Dezember", result);
     }
 
     @Test

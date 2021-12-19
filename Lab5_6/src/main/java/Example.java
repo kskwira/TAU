@@ -3,7 +3,7 @@ import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import java.util.Locale;
+import java.util.*;
 
 public class Example {
 
@@ -82,8 +82,97 @@ public class Example {
         return result;
     }
 
-    public String getMonthNameInJapanese(LocalDate date) {
-        return date.monthOfYear().getAsText(Locale.JAPANESE);
+    public double logarithm(int a){
+        double result = Math.log(a);
+        System.out.println("Natural logarithm of " + a + " equals: " + result);
+        return result;
+    }
+
+    public double squareRoot(int a){
+        double result = Math.sqrt(a);
+        System.out.println("Square root of " + a + " equals: " + result);
+        return result;
+    }
+
+    public double powerOfTwoNumbers(int a, int b){
+        double result = Math.pow(a, b);
+        System.out.println(a + " to the power of " + b + " equals: " + result);
+        return result;
+    }
+
+    public ArrayList<Integer> fibonacci(int N)
+    {
+        int num1 = 0, num2 = 1;
+        int counter = 0;
+        ArrayList<Integer> arr = new ArrayList<>();
+
+        // Iterate till counter is N
+        while (counter < N) {
+            // Print the number
+            arr.add(num1);
+            System.out.print(num1 + " ");
+
+            // Swap
+            int num3 = num2 + num1;
+            num1 = num2;
+            num2 = num3;
+            counter = counter + 1;
+        }
+        System.out.println();
+        return arr;
+    }
+
+    public int[] sortDesc(int [] arr) {
+        //Initialize array
+        int temp;
+
+        //Displaying elements of original array
+        System.out.println("Elements of original array: ");
+        for (int k : arr) {
+            System.out.print(k + " ");
+        }
+
+        //Sort the array in ascending order
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                if(arr[i] < arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        System.out.println();
+
+        //Displaying elements of array after sorting
+        System.out.println("Elements of array sorted in descending order: ");
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+
+        System.out.println();
+
+        return arr;
+    }
+
+    public boolean checkPrimeNumber(int a) {
+        boolean flag = true;
+        if (a == 0 || a == 1)
+            flag = false;
+        for (int i = 2; i <= a / 2; ++i) {
+            // condition for nonprime number
+            if (a % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        System.out.println(a + " is a prime number = " + flag);
+        return flag;
+    }
+
+    public String getMonthNameInGerman(LocalDate date) {
+        return date.monthOfYear().getAsText(Locale.GERMAN);
     }
 
     public String formatDate(LocalDate date) {
