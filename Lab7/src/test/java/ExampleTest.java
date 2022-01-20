@@ -205,8 +205,8 @@ public class ExampleTest {
     public void testMockDivide3() {
         System.out.println("TESTING MOCK DIVIDE TO THROW ARITHMETIC EXCEPTION");
         Example example = mock(Example.class);
-        given(example.mockDivide(8, 1)).willThrow(ArithmeticException.class);
-        assertThrows(ArithmeticException.class, () -> example.mockDivide(8, 1));
+        given(example.mockDivide(8, 0)).willThrow(ArithmeticException.class);
+        assertThrows(ArithmeticException.class, () -> example.mockDivide(8, 0));
     }
 
     @Test
